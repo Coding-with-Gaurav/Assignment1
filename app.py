@@ -18,8 +18,8 @@ def user_name_generator():
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
-        username = generate_username()
-        return render_template('uname.html', name=name, email=email, username=username)
+        userid = generate_username()
+        return render_template('uname.html', name=name, email=email, userid=userid)
 
 if __name__ == '__main__':
     app.run(debug=True)
